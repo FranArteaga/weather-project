@@ -2,25 +2,27 @@ import React from 'react'
 
 export default function WeatherCard() {
   return (
-    <div className=''>
-      <div className='border-2 border-black rounded p-8'>
+    <div className='border-2 border-black rounded-md p-8 min-w-[20em]'>
+      <div className=''>
 
-        <div className='py-2 flex justify-between  w-[20em] '>
+        <div className='py-2 flex justify-between   '>
           <div>
-            place1
+            Ciudad
           </div>
           <div>
-            place2
+            {/* place2 */}
           </div>
         </div>
-        <div className='py-2'>
-          place3
+        <div className='py-2 pb-12 text-3xl '>
+          <div>Temperatura</div>
+          <div>Clima</div>
         </div>
-        <div className='py-2'>
-          place4
+        
+        <div className='py-1'>
+          Humedad
         </div>
-        <div className='py-2'>
-          place5
+        <div className='py-1'>
+          Viento
         </div>
 
       </div>
