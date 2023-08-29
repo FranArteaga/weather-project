@@ -14,35 +14,42 @@ export default function Home() {
   const searchCity = (event) => {
     if (event.key === 'Enter') {
       fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        setWeather(data)
-        console.log(":0 la new data", data)
-      })
+        .then(response => response.json())
+        .then(data => {
+          setWeather(data)
+        })
       setCity('')
     }
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <input
-      value={city}
-      onChange={event => setCity(event.target.value)}
-      onKeyDown={searchCity}
-      placeholder='Enter a city name'
-      type='text'
-      className='px-5 py-2 border-2 border-black rounded-full'>
-      </input>
-      <div className=''>
+    <main className="h-[100vh] py-8 px-16"
+  >
+      <div className='flex flex-col items-center'>
 
-        <WeatherCard
-          city={weather.name}
-          temperature={weather.main ? `${weather.main.temp}°C` : null}
-          weather={weather.weather ? weather.weather[0].main : null}
-          humidity={weather.weather ? `${weather.main.humidity}%` : null}
-          wind={weather.weather ? `${weather.wind.speed}` : null}
+        <h1 className='sm:pt-0 text-[2.5em] font-bold py-8'>
+          Get the current Weather
+        </h1>
+        <input
+          value={city}
+          onChange={event => setCity(event.target.value)}
+          onKeyDown={searchCity}
+          placeholder='Enter a city name...'
+          type='text'
+          className='w-[22em] px-5 py-2 mb-8 border-2 border-black rounded-full'>
+        </input>
 
-        />
+        <div className=''>
+
+          <WeatherCard
+            city={weather.name}
+            temperature={weather.main ? `${weather.main.temp}°C` : null}
+            weather={weather.weather ? weather.weather[0].main : null}
+            humidity={weather.weather ? `Humidity: ${weather.main.humidity}%` : null}
+            wind={weather.weather ? `Wind speed: ${weather.wind.speed}km/h` : null}
+
+          />
+        </div>
       </div>
     </main>
   )
