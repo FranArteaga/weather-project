@@ -51,10 +51,11 @@ export default function Home() {
             city={weather.name}
             temperature={weather.main ? `${weather.main.temp}°C` : null}
             weather={weather.weather ? weather.weather[0].main : null}
+            weatherDescription={weather.weather ? weather.weather[0].description : null}
             max={weather.main ? `Max.:${weather.main.temp_max}°` : null}
             min={weather.main ? `Min.:${weather.main.temp_min}°` : null}
             humidity={weather.weather ? `Humidity: ${weather.main.humidity}%` : null}
-            wind={weather.weather ? `Wind speed: ${weather.wind.speed}km/h` : null}
+            wind={weather.weather ? `Wind speed: ${weather.wind.speed} km/h` : null}
 
           />
         </div>
