@@ -23,11 +23,15 @@ export default function Home() {
   }
 
   return (
-    <main className="h-[100vh] py-8 px-16"
+    <main className="h-[100vh] py-8 px-16" style={{
+      backgroundImage: "url('https://free4kwallpapers.com/uploads/originals/2017/10/11/mystic-mountains-wallpaper.jpg')",
+      backgroundSize: "cover", 
+      backgroundPosition: "",
+    }}
   >
       <div className='flex flex-col items-center'>
 
-        <h1 className='sm:pt-0 text-[2.5em] font-bold py-8'>
+        <h1 className='text-[2.5em] font-bold pb-6'>
           Get the current Weather
         </h1>
         <input
@@ -36,7 +40,9 @@ export default function Home() {
           onKeyDown={searchCity}
           placeholder='Enter a city name...'
           type='text'
-          className='w-[22em] px-5 py-2 mb-8 border-2 border-black rounded-full'>
+          className='w-[22em] px-5 font-bold py-2 mb-6 bg-black bg-opacity-0 border-2 border-black rounded-full'
+          >
+          
         </input>
 
         <div className=''>
