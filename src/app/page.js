@@ -32,7 +32,7 @@ export default function Home() {
       <div className='flex flex-col items-center'>
 
         <h1 className='text-[2.5em] font-bold pb-6'>
-          Get the current Weather
+          Get The Current Weather
         </h1>
         <input
           value={city}
@@ -40,7 +40,7 @@ export default function Home() {
           onKeyDown={searchCity}
           placeholder='Enter a city name...'
           type='text'
-          className='w-[22em] px-5 font-bold py-2 mb-6 bg-black bg-opacity-0 border-2 border-black rounded-full'
+          className='w-[22em] px-6 font-bold py-2 mb-6 bg-black bg-opacity-0 border-2 border-black rounded-full'
           >
           
         </input>
@@ -51,6 +51,8 @@ export default function Home() {
             city={weather.name}
             temperature={weather.main ? `${weather.main.temp}°C` : null}
             weather={weather.weather ? weather.weather[0].main : null}
+            max={weather.main ? `Max.:${weather.main.temp_max}°` : null}
+            min={weather.main ? `Min.:${weather.main.temp_min}°` : null}
             humidity={weather.weather ? `Humidity: ${weather.main.humidity}%` : null}
             wind={weather.weather ? `Wind speed: ${weather.wind.speed}km/h` : null}
 
