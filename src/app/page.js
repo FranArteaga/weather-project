@@ -29,10 +29,10 @@ export default function Home() {
   }
 
   return (
-    <main className={poppins.className} style={{
+    <main className={`${poppins.className} min-h-screen`}  style={{
       backgroundImage: "url('https://free4kwallpapers.com/uploads/originals/2017/10/11/mystic-mountains-wallpaper.jpg')",
       backgroundSize: "cover", 
-      backgroundPosition: "",
+      backgroundPosition: "center",
     }}
   >
       <div className=' h-[100vh] py-6 px-8 sm:px-16 bg-white bg-opacity-10 flex flex-col items-center'>
