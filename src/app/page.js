@@ -46,7 +46,7 @@ export default function Home() {
         </input>
 
         <div className=''>
-
+        { !!weather.name &&
           <WeatherCard
             city={weather.name}
             temperature={weather.main ? `${weather.main.temp}°C` : null}
@@ -57,7 +57,7 @@ export default function Home() {
             humidity={weather.weather ? `Humidity: ${weather.main.humidity}%` : null}
             wind={weather.weather ? `Wind speed: ${weather.wind.speed} km/h` : null}
 
-          />
+          />}
         </div>
       </div>
     </main>
