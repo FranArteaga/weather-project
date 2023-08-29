@@ -1,6 +1,12 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import WeatherCard from '@/components/weatherCard'
+import { Poppins } from '@next/font/google'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300','400', '500', '600', '700','800', '900']
+})
 
 export default function Home() {
   let weatherKey = process.env.NEXT_PUBLIC_WEATHER_KEY
@@ -23,15 +29,15 @@ export default function Home() {
   }
 
   return (
-    <main className="h-[100vh] py-6 px-8 sm:px-16" style={{
+    <main className={poppins.className} style={{
       backgroundImage: "url('https://free4kwallpapers.com/uploads/originals/2017/10/11/mystic-mountains-wallpaper.jpg')",
       backgroundSize: "cover", 
       backgroundPosition: "",
     }}
   >
-      <div className='flex flex-col items-center'>
+      <div className=' h-[100vh] py-6 px-8 sm:px-16 bg-white bg-opacity-10 flex flex-col items-center'>
 
-        <h1 className='text-[1.5em] sm:text-[2.5em] font-bold py-10 sm:py-0 sm:pb-6'>
+        <h1 className='text-[1.4em] sm:text-[2.5em] font-bold py-10 sm:py-0 sm:pb-6'>
           Get The Current Weather
         </h1>
         <input
