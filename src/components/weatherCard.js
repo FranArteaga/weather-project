@@ -3,8 +3,8 @@ import React from 'react'
 export default function WeatherCard(props) {
   const { city, temperature, weather, weatherDescription, humidity, wind, max, min } = props
   return (
-    <div className='sm:text-black sm:bg-white sm:bg-opacity-90 sm:border-2 sm:border-rose-100 sm:w-[20em] rounded-3xl sm:px-8 sm:py-6'>
-      <div className='sm:text-slate-900 flex flex-col justify-between'>
+    <div className='text-black bg-white bg-opacity-90 border-2 border-rose-100 w-[20em] rounded-3xl px-5 sm:px-7 py-7'>
+      <div className='text-slate-900 flex flex-col justify-between'>
 
         <div className='flex flex-col items-center pb-2 '>
           <div className='font-bold text-3xl'>
